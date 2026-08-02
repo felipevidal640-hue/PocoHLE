@@ -63,7 +63,7 @@ rm -rf release
 mkdir -p release
 
 {
-    printf '%s\n\n' "HyperHLE ${VERSION}"
+    printf '%s\n\n' "PocoHLE ${VERSION}"
     if [ "${FORCE_HYPERHLE_RELEASE:-}" = "true" ]; then
         printf '%s\n\n' "_Manual release — changelog shows the latest 5 commits._"
     fi
@@ -102,7 +102,7 @@ mkdir -p release
 cd "$ROOT/dev-scripts"
 ./prepare-release.sh --prepare-files
 
-prefix="HyperHLE"
+prefix="PocoHLE"
 
 ./prepare-release.sh --create-zip-macos "$ROOT/artifacts/macos/touchHLE.dmg" \
     -o "$ROOT/release/${prefix}_macOS_x86_64.zip"
